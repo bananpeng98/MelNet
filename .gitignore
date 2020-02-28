@@ -6,6 +6,7 @@ config/*
 !config/blizzard.yaml
 !config/inference.yaml
 !config/kss.yaml
+!config/nsynth-valid.yaml
 
 # logs, checkpoints
 chkpt/
