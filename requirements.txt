@@ -8,3 +8,4 @@ torch==1.2.0
 tqdm
 inflect
 Unidecode
+jamo
