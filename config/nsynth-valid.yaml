@@ -10,11 +10,11 @@ data:
   extension: '*.wav'
 ---
 audio:
-  sr: 22050
-  duration: 10.0
+  sr: 16000
+  duration: 4.0
   n_mels: 256
   hop_length: 256
-  #  win_length: 1536
+  win_length: 1536
   n_fft: 1536
   num_freq: 769
   ref_level_db: 20.0
