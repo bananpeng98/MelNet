@@ -1,6 +1,7 @@
 import random
 import numpy as np
 import subprocess
+import time
 import audiosegment
 
 PAD = '_'
@@ -21,8 +22,9 @@ def process_blizzard(text: str):
     return np.array(seq, dtype=np.int32)
 
 def get_commit_hash():
-    message = subprocess.check_output(["git", "rev-parse", "--short", "HEAD"])
-    return message.strip().decode('utf-8')
+    #message = subprocess.check_output(["git", "rev-parse", "--short", "HEAD"])
+    now = time.time()
+    return hex(now)[2:].decode('utf-8')
 
 def read_wav_np(wavpath, sample_rate):
     audio = audiosegment.from_file(wavpath).resample(sample_rate_Hz=sample_rate)
