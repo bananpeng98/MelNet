@@ -24,7 +24,7 @@ def process_blizzard(text: str):
 def get_commit_hash():
     #message = subprocess.check_output(["git", "rev-parse", "--short", "HEAD"])
     now = time.time()
-    return hex(now)[2:].decode('utf-8')
+    return hex(int(now))[2:]
 
 def read_wav_np(wavpath, sample_rate):
     audio = audiosegment.from_file(wavpath).resample(sample_rate_Hz=sample_rate)
